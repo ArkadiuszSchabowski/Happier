@@ -4,14 +4,18 @@ import { AiOutlineDownload } from "react-icons/ai";
 const EbookSection = () => {
   return (
     <section
-      className="bg-brandPurple flex flex-col items-center justify-center min-h-[80vh] relative z-10"
+      className="bg-brandPurple flex flex-col items-center justify-center min-h-[70vh] relative z-10 py-20"
       style={{
         backgroundImage: "url('/backgrounds/dots.png')",
       }}
     >
       <div className="flex items-center justify-center w-[80%] gap-6 md:gap-12 h-[400px]">
         <div className="min-w-32 w-64">
-          <img src={ebookImg} alt="" className="w-full  object-cover" />
+          <img
+            src={ebookImg}
+            alt=""
+            className="w-full object-cover rounded-[50px]"
+          />
         </div>
         <div className="h-full flex flex-col justify-around">
           <h3 className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-10 text-center sm:text-left ">
