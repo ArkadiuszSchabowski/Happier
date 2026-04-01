@@ -1,5 +1,5 @@
 const gridStyles =
-  "flex justify-center items-center flex-col text-xl md:text-2xl";
+  "flex justify-center items-center flex-col text-xl md:text-2xl w-[80%]";
 
 const TestResultsSection = () => {
   return (
@@ -9,27 +9,34 @@ const TestResultsSection = () => {
         backgroundImage: "url('/backgrounds/dots.png')",
       }}
     >
-      <div className="flex flex-col flex-wrap  sm:w-[50%] md:w-[40%]  text-center  my-6 mx-2">
-        <h3 className="text-2xl font-bold">
-          Wyjaśnijmy, od czego zależy naszze szczęście, na podstawie zasady
-          50-10-40
+      <div className="flex flex-col flex-wrap  text-center  mt-6 mb-12 mx-2">
+        <h3 className="text-3xl font-bold max-w-[700px]">
+          Wyjaśnijmy, jak zbudować trwały dobrostan w oparciu o najnowsze
+          odkrycia neurobiologii i psychologii.
         </h3>
       </div>
-      <div className="grid text-2xl  text-center gap-6 my-4 grid-cols-2 md:grid-cols-3">
+      <div className="grid text-2xl  text-center gap-8 my-4 grid-cols-2 lg:grid-cols-3 h-64 place-items-center">
         <div className={gridStyles}>
-          <p className="font-bold">00%</p>
-          <p>zależy od genów</p>
+          <p className="font-bold">~40% zależy od naszej biologii i genów.</p>
+          <p className="text-sm">
+            To nasz ewolucyjny punkt startowy, z którym się rodzimy.
+          </p>
         </div>
         <div className={gridStyles}>
-          <p className="font-bold">00%</p>
-          <p>zależy od nas samych!</p>
+          <p className="font-bold">Nawet 60% to wpływ środowiska i relacji.</p>
+          <p className="text-sm">
+            To ogromna przestrzeń Twoich osobistych doświadczeń i więzi
+            społecznych.
+          </p>
         </div>
-        <div className="md:hidden flex items-center justify-center text-xl">
-          <p>Co najważniejsze...</p>
-        </div>
-        <div className={gridStyles}>
-          <p className="font-bold">00%</p>
-          <p>zależy od okoloiczności życiowych</p>
+        <div className={`${gridStyles} col-span-2 w-full lg:col-span-1`}>
+          <p className="font-bold">
+            (Co najważniejsze): Twoje działania kształtują te 60%!
+          </p>
+          <p className="text-sm">
+            Szczęście to umiejętność. Wystarczy 10 minut celowego działania
+            dziennie, by wpłynąć na swoje środowisko, biologię i relacje.
+          </p>
         </div>
       </div>
     </section>
