@@ -29,7 +29,7 @@ const DotationsSection = () => {
   };
   return (
     <section
-      className="bg-white flex flex-col items-center justify-center py-12"
+      className="bg-white flex flex-col items-center justify-center py-12 px-6"
       style={{
         backgroundImage: "url('./backgrounds/dots.png')",
       }}
