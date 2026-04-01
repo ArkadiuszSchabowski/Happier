@@ -16,7 +16,9 @@ const AmountSelector = () => {
 
   return (
     <div className="flex flex-col  items-center gap-4 w-full relative">
-      <p className=" font-bold w-full">Wpłata jednorazowa</p>
+      <p className=" font-bold w-full text-xs sm:text-sm md:text-base lg:text-lg">
+        Wpłata jednorazowa
+      </p>
       <FormErrorMessage message={errors.customAmount?.message ?? ""} />
       <fieldset className="grid grid-cols-3 grid-rows-3 gap-4 ">
         {amounts.map((value, index) => (
@@ -33,7 +35,7 @@ const AmountSelector = () => {
               className="hidden peer"
             />
             <div
-              className={`border border-black rounded-full py-1 px-2 text-center hover:bg-gray-100 transition cursor-pointer peer-checked:bg-brandGreen peer-checked:text-white ${index > 2 && "row-start-2"} w-24`}
+              className={`border border-black rounded-full py-1 px-2 text-center text-xs sm:text-sm hover:bg-gray-100 transition cursor-pointer peer-checked:bg-brandGreen peer-checked:text-white ${index > 2 && "row-start-2"} w-24`}
             >
               {`${value} zł`}
             </div>
@@ -53,7 +55,7 @@ const AmountSelector = () => {
           })}
           type="number"
           placeholder="wpisz inną kwotę"
-          className="rounded-full py-1 px-2 border border-black col-span-3 row-start-3 placeholder:text-center"
+          className="rounded-full py-1 px-2 border border-black col-span-3 row-start-3 placeholder:text-center text-xs sm:text-sm"
         />
       </fieldset>
     </div>

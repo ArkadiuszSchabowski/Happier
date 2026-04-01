@@ -17,7 +17,7 @@ const DotationsSection = () => {
         backgroundImage: "url('./backgrounds/dots.png')",
       }}
     >
-      <h3 className="text-2xl md:text-4xl font-bold mb-10">Wesprzyj nas</h3>
+      <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-10">Wesprzyj nas</h3>
       <div className="p-6 border border-black rounded-2xl max-w-[650px] bg-white">
         <FormProvider {...methods}>
           <form

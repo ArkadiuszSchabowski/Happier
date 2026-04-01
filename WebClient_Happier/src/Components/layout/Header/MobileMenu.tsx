@@ -30,7 +30,7 @@ export default function MobileMenu() {
                 <li key={index}>
                   <a
                     href="#TODO"
-                    className="block py-3 font-bold hover:bg-gray-300 text-center border-b border-gray-400"
+                    className="block py-3 font-bold text-sm sm:text-base hover:bg-gray-300 text-center border-b border-gray-400"
                     onClick={() => setOpen(false)}
                   >
                     {link}

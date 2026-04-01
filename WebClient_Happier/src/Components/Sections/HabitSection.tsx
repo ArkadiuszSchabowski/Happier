@@ -23,25 +23,27 @@ const HabitSection = () => {
 
   return (
     <section
-      className="bg-brandYellow flex flex-col justify-around px-6 py-12 bg-[url('/backgrounds/dots.svg')] overflow-hidden"
+      className="bg-brandYellow flex flex-col justify-around px-4 sm:px-6 md:px-8 py-12 md:py-16 lg:py-20 bg-[url('/backgrounds/dots.svg')] overflow-hidden"
       style={{
         backgroundImage: "url('/backgrounds/dots.png')",
       }}
     >
       <div className=" flex items-center flex-col h-1/3">
-        <h3 className="font-bold text-xl mb-4">Co chcieliśmy sprawdzić?</h3>
-        <div className="grid grid-cols-2 grid-rows-2 items-center text-center w-full min-h-32  gap-2 mb-24  place-items-center">
-          <FaRegSmileBeam className="size-8 self-end" />
-          <MdOutlineAccessTime className="size-8 self-end" />
-          <p className="max-w-xs leading-relaxed opacity-90 text-xs md:text-lg">
+        <h3 className="font-bold text-lg sm:text-2xl md:text-3xl lg:text-4xl mb-6 sm:mb-8">
+          Co chcieliśmy sprawdzić?
+        </h3>
+        <div className="grid grid-cols-2 grid-rows-2 items-center text-center w-full min-h-32  gap-4 sm:gap-6 mb-16 sm:mb-24  place-items-center">
+          <FaRegSmileBeam className="size-6 sm:size-8 md:size-10 self-end" />
+          <MdOutlineAccessTime className="size-6 sm:size-8 md:size-10 self-end" />
+          <p className="max-w-xs leading-relaxed opacity-90 text-xs sm:text-sm md:text-lg lg:text-xl">
             W jaki sposób mikro-nawyki wpływają na samopoczucie?
           </p>
-          <p className="max-w-xs leading-relaxed opacity-90 text-xs md:text-lg">
+          <p className="max-w-xs leading-relaxed opacity-90 text-xs sm:text-sm md:text-lg lg:text-xl">
             Czy 10 minut dziennie wystarczyło, żeby dać efekt?
           </p>
         </div>
       </div>
-      <div className="flex flex-col items-center font-bold text-xl gap-10 w-full">
+      <div className="flex flex-col items-center font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl gap-8 sm:gap-10 md:gap-12 w-full">
         <h3 className=" text-center">Zbadaliśmy takie mikro-nawyki jak:</h3>
 
         <Carousel swiperRef={swiperRef}>

@@ -1,5 +1,5 @@
 import { Swiper } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import type { Swiper as SwiperType } from "swiper";
 import type { ReactNode } from "react";
@@ -25,12 +25,11 @@ const Carousel = ({ swiperRef, children }: Props) => {
           onBeforeInit={(swiper) => {
             swiperRef.current = swiper;
           }}
-          modules={[Navigation, Pagination, Autoplay]}
+          modules={[Navigation, Autoplay]}
           autoplay={{
             delay: 3000,
             disableOnInteraction: false,
           }}
-          pagination={{ clickable: true }}
           loop
           breakpoints={{
             "@0.00": {

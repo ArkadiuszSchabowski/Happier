@@ -42,14 +42,16 @@ export default function Footer() {
       }}
     >
       <div className="flex flex-col items-center max-w-96 justify-center h-3/4 gap-6">
-        <h3 className="text-3xl md:text-4xl font-bold text-center">
+        <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-center">
           Dołącz do inicjatywy
         </h3>
-        <p className="text-center">
+        <p className="text-center text-xs sm:text-sm md:text-base lg:text-lg">
           Chcesz pomóc w promowaniu wartościowej wiedzy naukowej? A może chcesz
           zmienić swoje nawyki?
         </p>
-        <p className="text-center">Wesprzyj kolejną edycję badania!</p>
+        <p className="text-center text-xs sm:text-sm md:text-base lg:text-lg">
+          Wesprzyj kolejną edycję badania!
+        </p>
         <ButtonLink
           className="border border-black font-thin flex items-center h-8"
           href="#"
@@ -59,7 +61,9 @@ export default function Footer() {
           <MdListAlt className="size-4 mr-2" />
           Wypełnij formularz
         </ButtonLink>
-        <p className="text-center">Każda forma pomocy jest na wagę złota!</p>
+        <p className="text-center text-xs sm:text-sm md:text-base lg:text-lg">
+          Każda forma pomocy jest na wagę złota!
+        </p>
       </div>
       <div className="flex justify-center gap-4 my-12">
         {socialIcons.map((icon, index) => (
@@ -75,7 +79,7 @@ export default function Footer() {
           </a>
         ))}
       </div>
-      <div className="flex flex-col items-center gap-6">
+      <div className="flex flex-col items-center gap-6 text-xs sm:text-sm md:text-base lg:text-lg">
         <p>#MałymiKrokami możemy być #Szczęśliwsi.</p>
         <p>Fantastycznego dnia dla Ciebie!</p>
       </div>

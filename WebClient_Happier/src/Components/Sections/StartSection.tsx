@@ -20,64 +20,77 @@ const StartSection = () => {
   }, []);
 
   return (
-    <section className="relative grid grid-cols-1 md:grid-cols-2 min-h-screen ">
+    <section className="relative min-h-screen overflow-hidden">
       <div
-        className="opacity-30 bg-cover bg-no-repeat absolute inset-0"
+        className="absolute inset-0 opacity-30 bg-cover bg-no-repeat pointer-events-none"
         style={{
           backgroundImage: "url('/backgrounds/straight-lines.svg')",
         }}
       ></div>
-      <div className="flex flex-col  z-20 w-full max-w-[500px] px-6 py-12 md:py-24 gap-8">
-        <div>
-          <p className="font-bold text-3xl md:text-5xl lg:text-6xl ">
-            Masz wpływ
-          </p>
-          <p className="font-bold text-3xl md:text-5xl lg:text-6xl relative ">
-            na twoje {""}
-            {colorWords.map((word, index) => (
-              <span
-                key={index}
-                className={`fadeItem ${word.delay} ${word.color} absolute top-0  transition-opacity duration-500 ${index === activeIndex ? "opacity-100" : "opacity-0"}`}
+
+      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-12 md:py-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center min-h-screen md:min-h-[unset]">
+          {/* Text Content */}
+          <div className="flex flex-col justify-center gap-6 md:gap-8">
+            <div>
+              <p className="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight">
+                Masz wpływ
+              </p>
+              <p className="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl relative leading-tight h-16 sm:h-20 md:h-24">
+                na twoje {""}
+                {colorWords.map((word, index) => (
+                  <span
+                    key={index}
+                    className={`fadeItem ${word.delay} ${word.color} absolute top-0 left-30 transition-opacity duration-500 ${index === activeIndex ? "opacity-100" : "opacity-0"}`}
+                  >
+                    {word.text}
+                  </span>
+                ))}
+              </p>
+            </div>
+
+            <div>
+              <p className="font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
+                Zrób to{" "}
+                <span
+                  className={`${colorWords[activeIndex].color} transition-all duration-300`}
+                >
+                  #MałymiKrokami
+                </span>
+              </p>
+            </div>
+
+            <div>
+              <p className="text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed max-w-md">
+                Chcemy pokazać, że zmiany na lepsze nie oznaczają wywracania
+                życia do góry nogami. Wystarczy {""}
+                <span className="font-bold">
+                  systematyka i 10 minut dziennie!
+                </span>
+              </p>
+            </div>
+
+            <div>
+              <ButtonLink
+                color="yellow"
+                variant="solid"
+                href="#"
+                className="inline-block border-black border px-4 py-2 rounded-2xl font-thin text-center hover:scale-105 transition-transform"
               >
-                {word.text}
-              </span>
-            ))}
-          </p>
+                Dołącz do inicjatywy!
+              </ButtonLink>
+            </div>
+          </div>
+
+          {/* Image */}
+          <div className="flex items-center justify-center">
+            <img
+              src={woman}
+              alt="woman who sit on the floor"
+              className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg object-contain"
+            />
+          </div>
         </div>
-        <div>
-          <p className="font-bold text-xl">
-            Zrób to{" "}
-            <span
-              className={`${colorWords[activeIndex].color} transition-all duration-300`}
-            >
-              #MałymiKrokami
-            </span>
-          </p>
-        </div>
-        <div>
-          <p>
-            Chcemy pokazać, że zmiany na lepsze nie oznaczają wywracania życia
-            do góry nogami. Wystarczy {""}
-            <span className="font-bold">systematyka i 10 minut dziennie!</span>
-          </p>
-        </div>
-        <div>
-          <ButtonLink
-            color="yellow"
-            variant="solid"
-            href="#"
-            className="border-black border px-4 w-full max-w-48 rounded-2xl font-thin text-center z-20"
-          >
-            Dołącz do inicjatywy!
-          </ButtonLink>
-        </div>
-      </div>
-      <div className="flex items-end justify-center md:justify-center md:items-center px-6 md:px-10 absolute -bottom-10 right-0 z-30 md:static">
-        <img
-          src={woman}
-          alt="woman who sit on the floor"
-          className="w-[300px] sm:w-[350px] md:w-[380px] lg:w-[500px] object-contain"
-        />
       </div>
     </section>
   );

@@ -15,7 +15,7 @@ const NewsletterSection = () => {
             <img src={light} alt="light icon" className="pr-2" />
           </div>
           <div className="w-full">
-            <p className="font-bold text-lg md:text-2xl">
+            <p className="font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
               Zapisz się do <span className="text-[#3D38F5]">newslettera</span>,
               aby poznać wyniki.
             </p>
