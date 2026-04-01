@@ -34,7 +34,7 @@ const DotationsSection = () => {
               <AmountSelector />
               <button
                 type="submit"
-                className="border-black border mt-10 md:mt-0 md:mb-10 max-w-56 rounded-full px-4 py-1 bg-[#198F51] text-white"
+                className="border-black border mt-10 md:mt-0 md:mb-10 max-w-56 rounded-full px-4 py-1 bg-[#198F51] text-white hover:text-white hover:bg-brandGraphite transition-all"
               >
                 Wesprzyj przez PayU
               </button>

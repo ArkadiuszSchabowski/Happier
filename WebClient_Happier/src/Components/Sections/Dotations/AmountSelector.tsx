@@ -33,7 +33,7 @@ const AmountSelector = () => {
               className="hidden peer"
             />
             <div
-              className={`border border-black rounded-full py-1 px-2 text-center hover:bg-gray-100 transition cursor-pointer peer-checked:bg-gray-200 ${index > 2 && "row-start-2"} w-24`}
+              className={`border border-black rounded-full py-1 px-2 text-center hover:bg-gray-100 transition cursor-pointer peer-checked:bg-brandGreen peer-checked:text-white ${index > 2 && "row-start-2"} w-24`}
             >
               {`${value} zł`}
             </div>

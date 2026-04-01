@@ -15,7 +15,7 @@ const PolicyCheckbox = () => {
         {...register("policy", {
           required: {
             value: true,
-            message: "Akceptacja warunków jest wymagana.",
+            message: "Zgoda jest wymagana, aby przejść dalej",
           },
         })}
         type="checkbox"

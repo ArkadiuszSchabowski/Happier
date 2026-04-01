@@ -72,11 +72,11 @@ const StartSection = () => {
           </ButtonLink>
         </div>
       </div>
-      <div className="flex items-end justify-center md:justify-end px-6 md:px-10 absolute -bottom-10 right-0 z-30 md:static">
+      <div className="flex items-end justify-center md:justify-center md:items-center px-6 md:px-10 absolute -bottom-10 right-0 z-30 md:static">
         <img
           src={woman}
           alt="woman who sit on the floor"
-          className="w-[300px] sm:w-[350px] md:w-[380px] lg:w-[450px] object-contain"
+          className="w-[300px] sm:w-[350px] md:w-[380px] lg:w-[500px] object-contain"
         />
       </div>
     </section>
