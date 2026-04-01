@@ -5,8 +5,8 @@
   # Komenda do build'a
   command = "npm run build"
 
-  # Katalog z zbudowaną aplikacją
-  publish = "WebClient_Happier/dist"
+  # Katalog z zbudowaną aplikacją (względem base)
+  publish = "dist"
 
 [build.environment]
   # Zmienne środowiskowe dla build'a
