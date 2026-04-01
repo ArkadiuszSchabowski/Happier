@@ -14,8 +14,8 @@ export default {
         brandSecondWhite: "#E5E5E5",
       },
       fontFamily: {
-        plush: ['Plush', 'sans-serif'],
-      }
+        plush: ["Plush", "sans-serif"],
+      },
     },
   },
   plugins: [],

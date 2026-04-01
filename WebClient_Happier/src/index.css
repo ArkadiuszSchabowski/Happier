@@ -40,3 +40,40 @@
 body {
   font-family: "Plush", sans-serif;
 }
+@layer utilities {
+  .fadeItem {
+    position: absolute;
+    top: 0;
+    padding-left: 14px;
+    opacity: 0;
+    animation: fadeCycle 9s infinite;
+  }
+
+  .delay-0 {
+    animation-delay: 0s;
+  }
+  .delay-1 {
+    animation-delay: 3s;
+  }
+  .delay-2 {
+    animation-delay: 6s;
+  }
+
+  @keyframes fadeCycle {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    30% {
+      opacity: 1;
+    }
+    40% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}

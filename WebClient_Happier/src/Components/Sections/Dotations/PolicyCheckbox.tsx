@@ -1,6 +1,6 @@
 import { useFormContext } from "react-hook-form";
-import { FormErrorMessage } from "../shared/FormErrorMessage";
-import type { DotationsFormType } from "../../types";
+import { FormErrorMessage } from "../../shared/FormErrorMessage";
+import type { DotationsFormType } from "../../../types";
 
 const PolicyCheckbox = () => {
   const {

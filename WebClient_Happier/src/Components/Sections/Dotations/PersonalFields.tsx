@@ -1,6 +1,6 @@
 import { useFormContext } from "react-hook-form";
 import { TextInput } from "./TextInput";
-import type { DotationsFormType } from "../../types";
+import type { DotationsFormType } from "../../../types";
 
 const PersonalFields = () => {
   const {
