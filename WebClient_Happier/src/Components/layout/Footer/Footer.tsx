@@ -5,7 +5,12 @@ import { TikTok } from "../../../assets/icons/TikTok";
 
 export default function Footer() {
   return (
-    <footer className="relative bg-[url('/backgrounds/dots.svg')] bg-cover bg-repeat py-20 px-4">
+    <footer
+      className="relative bg-brandSecondWhite bg-cover bg-repeat py-20 px-4"
+      style={{
+        backgroundImage: "url('/backgrounds/dots.png')",
+      }}
+    >
       <div className="absolute inset-0 bg-white/85"></div>
       <div className="container mx-auto relative z-10 px-[25px]">
         {/* Layout responsywny - kolumna na mobile, wiersz na desktop */}
