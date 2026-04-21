@@ -9,7 +9,7 @@ export function TopNavigation() {
         {data.map((item, index) => (
           <li
             key={index}
-            className="px-2 py-3 font-bold whitespace-nowrap hover:underline flex items-center"
+            className="px-2 py-3 font-bold whitespace-nowrap hover:text-brandGreen flex items-center transition-all"
           >
             <a href="#">{item}</a>
             <span className="ml-2 h-[2em] border-r-2 border-black"></span>
@@ -18,7 +18,7 @@ export function TopNavigation() {
 
         <li>
           <ButtonLink
-            className="rounded-2xl border-black border px-6 font-thin"
+            className="border-black border px-4 font-thin py-[2px]"
             color="green"
             variant="solid"
             href="#"

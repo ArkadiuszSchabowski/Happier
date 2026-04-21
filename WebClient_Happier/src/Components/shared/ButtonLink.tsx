@@ -46,7 +46,8 @@ export default function ButtonLink({
   children,
   target = "_self",
 }: ButtonLinkProps) {
-  const base = "block px-4 py-2 rounded-full font-black transition";
+  const base =
+    "block px-4 py-2 rounded-full font-black transition hover:text-white hover:bg-brandGraphite";
   const cv = styles[color][variant];
   return (
     <a href={href} target={target} className={`${base} ${cv} ${className}`}>

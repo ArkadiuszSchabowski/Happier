@@ -1,6 +1,6 @@
 import { useFormContext } from "react-hook-form";
-import { FormErrorMessage } from "../shared/FormErrorMessage";
-import type { DotationsFormType } from "../../types";
+import { FormErrorMessage } from "../../shared/FormErrorMessage";
+import type { DotationsFormType } from "../../../types";
 
 const PolicyCheckbox = () => {
   const {
@@ -15,7 +15,7 @@ const PolicyCheckbox = () => {
         {...register("policy", {
           required: {
             value: true,
-            message: "Akceptacja warunków jest wymagana.",
+            message: "Zgoda jest wymagana, aby przejść dalej",
           },
         })}
         type="checkbox"
