@@ -1,0 +1,3 @@
+# Przekierowania dla SPA (Single Page Application)
+# Wszystkie żądania przekieruj do index.html
+/*    /index.html   200
