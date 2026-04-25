@@ -32,7 +32,7 @@ const HabitSection = () => {
         <h3 className="font-bold text-lg sm:text-2xl md:text-3xl lg:text-4xl mb-6 sm:mb-8">
           Co chcieliśmy sprawdzić?
         </h3>
-        <div className="grid grid-cols-2 grid-rows-2 items-center text-center w-full min-h-32  gap-4 sm:gap-6 mb-16 sm:mb-24  place-items-center">
+        <div className="grid grid-cols-2 grid-rows-2 items-center text-center w-full max-w-[1000px] min-h-32  gap-4 sm:gap-6 mb-16 sm:mb-24  place-items-center">
           <FaRegSmileBeam className="size-6 sm:size-8 md:size-10 self-end" />
           <MdOutlineAccessTime className="size-6 sm:size-8 md:size-10 self-end" />
           <p className="max-w-xs leading-relaxed opacity-90 text-xs sm:text-sm md:text-lg lg:text-xl">

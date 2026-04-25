@@ -4,14 +4,14 @@ import TaflaLogo from "../../assets/img/Tafla-Logo.png";
 //Styles
 const textStyles = "text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed";
 const containerSideStyles =
-  "flex flex-col items-center justify-between h-full max-w-80 text-center flex-wrap p-6 gap-5";
+  "flex flex-col items-center justify-between h-full max-w-80 text-center flex-wrap p-6 gap-6";
 const headingStyles =
   "font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl";
 
 const PatronitesSections = () => {
   return (
     <section
-      className="bg-brandBlue text-white flex justify-around  flex-wrap px-16 py-2 relative z-10"
+      className="bg-brandBlue text-white flex justify-center  flex-wrap px-16 py-2 relative z-10 gap-32"
       style={{
         backgroundImage: "url('/backgrounds/dots.png')",
       }}

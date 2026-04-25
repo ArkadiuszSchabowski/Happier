@@ -36,7 +36,7 @@ const socialIcons = [
 export default function Footer() {
   return (
     <footer
-      className="relative bg-brandWhite bg-cover bg-repeat py-24 px-4 min-h-[80vh] flex flex-col items-center"
+      className="relative bg-brandWhite bg-cover bg-repeat py-24 px-4 min-h-[60vh] flex flex-col items-center"
       style={{
         backgroundImage: "url('/backgrounds/dots.png')",
       }}
@@ -53,7 +53,7 @@ export default function Footer() {
           Wesprzyj kolejną edycję badania!
         </p>
         <ButtonLink
-          className="border border-black font-thin flex items-center h-8"
+          className="border border-black font-bold flex items-center px-6 py-3 sm:px-7 sm:py-3 text-sm sm:text-base md:text-lg lg:text-xl"
           href="#"
           color="yellow"
           variant="solid"
