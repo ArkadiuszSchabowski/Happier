@@ -21,7 +21,7 @@ export function TopNavigation() {
             className="border-black border px-4 font-thin py-[2px]"
             color="green"
             variant="solid"
-            href="#"
+            href="#wesprzyj"
           >
             Wesprzyj nas
           </ButtonLink>
