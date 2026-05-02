@@ -12,6 +12,7 @@ const DotationsSection = () => {
 
   return (
     <section
+      id="wesprzyj"
       className="bg-white flex flex-col items-center justify-center min-h-[70vh] py-20 px-6 relative"
       style={{
         backgroundImage: "url('./backgrounds/dots.png')",
