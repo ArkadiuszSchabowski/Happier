@@ -39,7 +39,14 @@ export default function MobileMenu() {
               );
             })}
           </ul>
-        </nav>
+          <a
+              href="#wesprzyj"
+              onClick={() => setOpen(false)}
+              className="block mx-4 my-3 text-center font-black px-4 py-2 rounded-full bg-[#198F51] text-white hover:bg-gray-700 transition"
+            >
+          Wesprzyj nas
+        </a>
+      </nav>
       )}
     </div>
   );
