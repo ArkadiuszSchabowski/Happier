@@ -18,12 +18,24 @@ builder.Services.AddScoped<ErrorHandlingMiddleware>();
 
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("CorsPolicy", policy =>
+    {
+        policy.WithOrigins("http://localhost:5173", "https://szczesliwsi.netlify.app")
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
+
 builder.Services.AddScoped<INewsletterService, NewsletterService>();
 builder.Services.AddScoped<INewsletterRepository, NewsletterRepository>();
 builder.Services.AddScoped<ISubscribeValidator, SubscribeValidator>();
 builder.Services.AddScoped<ITextNormalizer, TextNormalizer>();
 
 var app = builder.Build();
+
+app.UseCors("CorsPolicy");
 
 app.UseMiddleware<ErrorHandlingMiddleware>();
 
