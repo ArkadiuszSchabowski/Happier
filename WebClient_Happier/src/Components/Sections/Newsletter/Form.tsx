@@ -13,8 +13,8 @@ const Form = () => {
   } = useForm<FormType>();
 
   const onSubmit = async (data: FormType) => {
-    console.log(data);
-    await fetch(
+  try {
+    const res = await fetch(
       "https://happier.azurewebsites.net/api/newsletter",
       {
         method: "POST",
@@ -27,7 +27,19 @@ const Form = () => {
         }),
       }
     );
+
+    if (!res.ok) {
+      const error = await res.text();
+      console.error("API ERROR:", error);
+      return;
+    }
+
+    console.log("SUCCESS");
+
+  } catch (err) {
+    console.log("NETWORK ERROR:", err);
   };
+}
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
