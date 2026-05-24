@@ -12,8 +12,21 @@ const Form = () => {
     formState: { errors },
   } = useForm<FormType>();
 
-  const onSubmit = (data: FormType) => {
+  const onSubmit = async (data: FormType) => {
     console.log(data);
+    await fetch(
+      "https://happier.azurewebsites.net/api/newsletter",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: data.email,
+          consent: data.agreement,
+        }),
+      }
+    );
   };
 
   return (
