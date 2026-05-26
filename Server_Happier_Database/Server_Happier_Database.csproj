@@ -16,4 +16,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Server_Shared\Server_Shared.csproj" />
+  </ItemGroup>
+
 </Project>

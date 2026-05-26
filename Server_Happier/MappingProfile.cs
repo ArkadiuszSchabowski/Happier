@@ -9,6 +9,7 @@ namespace Server_Happier
         public MappingProfile()
         {
             CreateMap<AddSubscribeDto, Subscribe>();
+            CreateMap<CreateNewsletterDto, Newsletter>();
         }
     }
 }

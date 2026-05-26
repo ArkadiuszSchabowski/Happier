@@ -31,13 +31,14 @@ builder.Services.AddCors(options =>
 builder.Services.AddScoped<INewsletterService, NewsletterService>();
 builder.Services.AddScoped<INewsletterRepository, NewsletterRepository>();
 builder.Services.AddScoped<ISubscribeValidator, SubscribeValidator>();
+builder.Services.AddScoped<INewsletterValidator, NewsletterValidator>();
 builder.Services.AddScoped<ITextNormalizer, TextNormalizer>();
 
 var app = builder.Build();
 
 app.UseCors("CorsPolicy");
 
-app.UseMiddleware<ErrorHandlingMiddleware>();
+//app.UseMiddleware<ErrorHandlingMiddleware>();
 
 if (app.Environment.IsDevelopment())
 {
