@@ -5,8 +5,8 @@ namespace Server_Happier.Interfaces
 {
     public interface INewsletterRepository
     {
-        void AddNewsletterAsync(Newsletter entity);
-        void AddSubscriberAsync(Subscribe entity);
-        void ExistsNewsletterAsync(Month month, int year);
+        Task AddNewsletterAsync(Newsletter entity);
+        Task AddSubscriberAsync(Subscribe entity);
+        Task<bool> ExistsNewsletterAsync(Month month, int year);
     }
 }
