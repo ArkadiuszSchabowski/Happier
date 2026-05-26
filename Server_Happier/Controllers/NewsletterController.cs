@@ -15,6 +15,18 @@ namespace Server_Happier.Controllers
             _service = service;
         }
         [HttpPost]
+        public async Task<ActionResult> Create(
+            [FromBody] CreateNewsletterDto dto)
+        {
+            await _service.CreateAsync(dto);
+
+            return Ok(new
+            {
+                message = $"Newsletter for month {dto.Month} created successfully."
+            });
+        }
+
+        [HttpPost("subscribe")]
         public async Task<ActionResult> Subscribe([FromBody] AddSubscribeDto dto)
         {
             await _service.SubscribeAsync(dto);
