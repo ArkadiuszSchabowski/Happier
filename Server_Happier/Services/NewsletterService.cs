@@ -23,11 +23,11 @@ namespace Server_Happier.Services
             _mapper = mapper;
         }
 
-        public Task CreateAsync(CreateNewsletterDto dto)
+        public async Task CreateAsync(CreateNewsletterDto dto)
         {
             _newsletterValidator.Validate(dto);
 
-            bool exists = await _repository.ExistsNewsletterAsync(dto.Month, dto.Year);
+            bool exists = await _newsletterRepository.ExistsNewsletterAsync(dto.Month, dto.Year);
 
             if (exists)
             {
@@ -37,12 +37,10 @@ namespace Server_Happier.Services
 
             Newsletter entity = _mapper.Map<Newsletter>(dto);
 
-            _newsletterRepository.AddNewsletterAsync(entity);
-
-            return Task.CompletedTask;
+            await _newsletterRepository.AddNewsletterAsync(entity);
         }
 
-        public Task SubscribeAsync(AddSubscribeDto dto)
+        public async Task SubscribeAsync(AddSubscribeDto dto)
         {
             _textNormalizer.Normalize(dto.Email);
 
@@ -50,9 +48,7 @@ namespace Server_Happier.Services
 
             Subscribe entity = _mapper.Map<Subscribe>(dto);
 
-            _newsletterRepository.AddSubscriberAsync(entity);
-
-            return Task.CompletedTask;
+            await _newsletterRepository.AddSubscriberAsync(entity);
         }
     }
 }

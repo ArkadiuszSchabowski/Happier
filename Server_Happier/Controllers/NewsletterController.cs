@@ -22,7 +22,7 @@ namespace Server_Happier.Controllers
 
             return Ok(new
             {
-                message = $"Newsletter for month {dto.Month} created successfully."
+                message = $"Newsletter for {dto.Month} {dto.Year} created successfully."
             });
         }
 

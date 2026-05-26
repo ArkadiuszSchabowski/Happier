@@ -38,7 +38,7 @@ var app = builder.Build();
 
 app.UseCors("CorsPolicy");
 
-//app.UseMiddleware<ErrorHandlingMiddleware>();
+app.UseMiddleware<ErrorHandlingMiddleware>();
 
 if (app.Environment.IsDevelopment())
 {
