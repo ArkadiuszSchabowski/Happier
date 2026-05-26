@@ -6,6 +6,7 @@ namespace Server_Happier_Database
     public class MyDbContext : DbContext
     {
         public DbSet<Subscribe> Subscribers { get; set; }
+        public DbSet<Newsletter> Newsletters { get; set; }
 
         public MyDbContext(DbContextOptions<MyDbContext> options) : base(options)
         {
