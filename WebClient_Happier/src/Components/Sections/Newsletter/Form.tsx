@@ -15,7 +15,7 @@ const Form = () => {
   const onSubmit = async (data: FormType) => {
   try {
     const res = await fetch(
-      "https://happier.azurewebsites.net/api/newsletter",
+      "https://happier.azurewebsites.net/api/newsletter/subscribe",
       {
         method: "POST",
         headers: {
