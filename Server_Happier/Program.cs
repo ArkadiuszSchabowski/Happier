@@ -22,7 +22,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("CorsPolicy", policy =>
     {
-        policy.WithOrigins("http://localhost:5173", "https://szczesliwsi.netlify.app")
+        policy.WithOrigins("http://localhost:5173", "https://szczesliwsi.netlify.app", "https://white-plant-035eb3c03.7.azurestaticapps.net")
               .AllowAnyHeader()
               .AllowAnyMethod();
     });
