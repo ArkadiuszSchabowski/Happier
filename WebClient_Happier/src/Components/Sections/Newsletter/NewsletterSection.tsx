@@ -1,6 +1,8 @@
 import light from "../../../assets/img/Vector.png";
 import { Form } from "./Form";
 
+//Azure deployment test
+
 const NewsletterSection = () => {
   return (
     <section
