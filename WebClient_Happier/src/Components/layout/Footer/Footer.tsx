@@ -36,6 +36,7 @@ const socialIcons = [
 export default function Footer() {
   return (
     <footer
+    id="dolacz"
       className="relative bg-brandWhite bg-cover bg-repeat py-24 px-4 min-h-[60vh] flex flex-col items-center"
       style={{
         backgroundImage: "url('/backgrounds/dots.png')",
