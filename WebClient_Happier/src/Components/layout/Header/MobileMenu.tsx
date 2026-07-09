@@ -4,7 +4,14 @@ import { useState } from "react";
 
 export default function MobileMenu() {
   const [open, setOpen] = useState(false);
-  const navLinks = ["O badaniu", "Wyniki", "Ambasadorzy", "Chcę dołączyć!"];
+
+  const navLinks = [
+    { label: "O badaniu", href: "#" },
+    { label: "Wyniki", href: "#" },
+    { label: "Ambasadorzy", href: "#ambasadorzy" },
+    { label: "Chcę dołączyć!", href: "#dolacz" },
+  ];
+
   return (
     <div className="lg:hidden relative">
       <button
@@ -21,7 +28,6 @@ export default function MobileMenu() {
         />
       </button>
 
-      {/* Dropdown menu - zaokrąglone rogi, wyśrodkowane teksty, krótsze linie */}
       {open && (
         <nav className="absolute top-full right-0 mt-2 bg-gray-200 shadow-[0_4px_6px_rgba(0,0,0,0.25)] rounded-b-xl min-w-[200px] overflow-hidden">
           <ul>
@@ -29,24 +35,25 @@ export default function MobileMenu() {
               return (
                 <li key={index}>
                   <a
-                    href="#TODO"
+                    href={link.href}
                     className="block py-3 font-bold text-sm sm:text-base hover:bg-gray-300 text-center border-b border-gray-400"
                     onClick={() => setOpen(false)}
                   >
-                    {link}
+                    {link.label}
                   </a>
                 </li>
               );
             })}
           </ul>
+
           <a
-              href="#wesprzyj"
-              onClick={() => setOpen(false)}
-              className="block mx-4 my-3 text-center font-black px-4 py-2 rounded-full bg-[#198F51] text-white hover:bg-gray-700 transition"
-            >
-          Wesprzyj nas
-        </a>
-      </nav>
+            href="#wesprzyj"
+            onClick={() => setOpen(false)}
+            className="block mx-4 my-3 text-center font-black px-4 py-2 rounded-full bg-[#198F51] text-white hover:bg-gray-700 transition"
+          >
+            Wesprzyj nas
+          </a>
+        </nav>
       )}
     </div>
   );
