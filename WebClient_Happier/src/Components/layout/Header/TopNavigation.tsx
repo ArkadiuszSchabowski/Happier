@@ -1,6 +1,11 @@
 import ButtonLink from "../../shared/ButtonLink";
 
-const data = ["O badaniu", "Wyniki", "Ambasadorzy", "Dołącz do inicjatywy!"];
+const data = [
+  { label: "O badaniu", href: "#" },
+  { label: "Wyniki", href: "#" },
+  { label: "Ambasadorzy TEST", href: "#ambasador" },
+  { label: "Dołącz do inicjatywy!", href: "#" },
+];
 
 export function TopNavigation() {
   return (
@@ -11,7 +16,7 @@ export function TopNavigation() {
             key={index}
             className="px-2 py-3 font-bold whitespace-nowrap hover:text-brandGreen flex items-center transition-all"
           >
-            <a href="#">{item}</a>
+            <a href={item.href}>{item.label}</a>
             <span className="ml-2 h-[2em] border-r-2 border-black"></span>
           </li>
         ))}
