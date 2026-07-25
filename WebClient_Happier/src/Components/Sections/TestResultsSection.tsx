@@ -3,7 +3,7 @@ const gridStyles =
 
 const TestResultsSection = () => {
   return (
-    <section
+    <section 
       className="bg-brandYellow bg-cover bg-center flex flex-col items-center justify-center min-h-[80vh] flex-wrap px-4 sm:px-6 md:px-8 relative pb-12 sm:pb-20 md:pb-36 pt-12 sm:pt-16 md:pt-20"
       style={{
         backgroundImage: "url('/backgrounds/dots.png')",

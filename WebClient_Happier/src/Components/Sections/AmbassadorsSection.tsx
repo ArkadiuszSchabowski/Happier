@@ -10,8 +10,8 @@ const AmbassadorsSection = () => {
 
   return (
     <section
-      id="ambasador"
-      className="bg-brandBlue py-24 overflow-hidden"
+    id="ambasadorzy"
+      className="bg-brandBlue py-24  overflow-hidden"
       style={{
         backgroundImage: "url('/backgrounds/dots.png')",
       }}
@@ -25,7 +25,6 @@ const AmbassadorsSection = () => {
             Tutaj znajdziecie publikacje ambasadorów naszego badania:
           </p>
         </div>
-
         <Carousel swiperRef={swiperRef}>
           {ambassadors.map((item, index) => (
             <SwiperSlide key={index} className="flex justify-center">

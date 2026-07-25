@@ -3,8 +3,8 @@ import ButtonLink from "../../shared/ButtonLink";
 const data = [
   { label: "O badaniu", href: "#" },
   { label: "Wyniki", href: "#" },
-  { label: "Ambasadorzy TEST", href: "#ambasador" },
-  { label: "Dołącz do inicjatywy!", href: "#" },
+  { label: "Ambasadorzy", href: "#ambasadorzy" },
+  { label: "Dołącz do inicjatywy!", href: "#dolacz" },
 ];
 
 export function TopNavigation() {
