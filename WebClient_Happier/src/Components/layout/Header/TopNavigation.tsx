@@ -3,7 +3,7 @@ import ButtonLink from "../../shared/ButtonLink";
 const data = [
   { label: "O badaniu", href: "#" },
   { label: "Wyniki", href: "#" },
-  { label: "Ambasadorzy", href: "#ambasador" },
+  { label: "Ambasadorzy", href: "#ambasadorzy" },
   { label: "Dołącz do inicjatywy!", href: "#dolacz" },
 ];
 
