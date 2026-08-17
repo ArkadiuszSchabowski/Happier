@@ -77,7 +77,7 @@ const StartSection = () => {
                 href="#"
                 className="inline-block border-black border px-4 py-2 rounded-2xl font-thin text-center hover:scale-105 transition-transform"
               >
-                Dołącz do inicjatywy!
+                Pobierz raport
               </ButtonLink>
             </div>
           </div>
