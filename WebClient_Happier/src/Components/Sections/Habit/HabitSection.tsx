@@ -3,17 +3,10 @@ import { register } from "swiper/element/bundle";
 import { SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
-import { Carousel } from "../shared/Carousel";
+import { Carousel } from "../../shared/Carousel";
 import { FaRegSmileBeam } from "react-icons/fa";
 import { MdOutlineAccessTime } from "react-icons/md";
-const cardText = [
-  "Cieszenie się chwilą",
-  "Wdzięczność",
-  "Zapisywanie faktów",
-  "Pozytywne stwierdzenia",
-  "Picie wody rano",
-  "Technika oddechowa 4/6",
-];
+import { habitsCards } from "./Habit.data";
 
 const HabitSection = () => {
   const swiperRef = useRef<SwiperType | null>(null);
@@ -47,11 +40,14 @@ const HabitSection = () => {
         <h3 className=" text-center">Zbadaliśmy takie mikro-nawyki jak:</h3>
 
         <Carousel swiperRef={swiperRef}>
-          {cardText.map((card, index) => (
-            <SwiperSlide key={index} className="flex justify-center">
-              <div className="bg-gray-200 rounded-lg min-w-[100px] max-w-[280px] h-[300px] relative mx-auto shadow-xl">
+          {habitsCards.map((card) => (
+            <SwiperSlide key={card.id} className="flex justify-center">
+              <div
+                className="bg-center bg-cover bg-no-repeat rounded-lg min-w-[100px] max-w-[280px] h-[300px] relative mx-auto shadow-xl"
+                style={{ backgroundImage: `url(${card.image})` }}
+              >
                 <div className="absolute bottom-0 text-sm h-1/4 bg-white w-full rounded-b-lg text-center flex items-center justify-center px-2 text-black font-semibold">
-                  {card}
+                  {card.text}
                 </div>
               </div>
             </SwiperSlide>
