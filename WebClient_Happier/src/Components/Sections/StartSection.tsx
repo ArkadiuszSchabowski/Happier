@@ -20,7 +20,7 @@ const StartSection = () => {
   }, []);
 
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden" id="about-test">
       <div
         className="absolute inset-0 opacity-30 bg-cover bg-no-repeat pointer-events-none"
         style={{

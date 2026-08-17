@@ -10,7 +10,7 @@ const AmbassadorsSection = () => {
 
   return (
     <section
-    id="ambasadorzy"
+      id="ambasadors"
       className="bg-brandBlue py-24  overflow-hidden"
       style={{
         backgroundImage: "url('/backgrounds/dots.png')",
