@@ -7,55 +7,76 @@ import { Carousel } from "../../shared/Carousel";
 import { FaRegSmileBeam } from "react-icons/fa";
 import { MdOutlineAccessTime } from "react-icons/md";
 import { habitsCards } from "./Habit.data";
-
 const HabitSection = () => {
   const swiperRef = useRef<SwiperType | null>(null);
   useEffect(() => {
     register();
   }, []);
-
   return (
     <section
-      className="bg-brandYellow flex flex-col justify-around px-4 sm:px-6 md:px-8 py-12 md:py-16 lg:py-20 bg-[url('/backgrounds/dots.svg')] overflow-hidden"
-      style={{
-        backgroundImage: "url('/backgrounds/dots.png')",
-      }}
+      className="relative flex flex-col justify-around bg-brandYellow px-4 py-12 sm:px-6 md:px-8 md:py-16 lg:py-20 overflow-visible"
+      style={{ backgroundImage: "url('/backgrounds/dots.png')" }}
     >
-      <div className=" flex items-center flex-col h-1/3">
-        <h3 className="font-bold text-lg sm:text-2xl md:text-3xl lg:text-4xl mb-6 sm:mb-8">
-          Co chcieliśmy sprawdzić?
-        </h3>
-        <div className="grid grid-cols-2 grid-rows-2 items-center text-center w-full max-w-[1000px] min-h-32  gap-4 sm:gap-6 mb-16 sm:mb-24  place-items-center">
-          <FaRegSmileBeam className="size-6 sm:size-8 md:size-10 self-end" />
-          <MdOutlineAccessTime className="size-6 sm:size-8 md:size-10 self-end" />
-          <p className="max-w-xs leading-relaxed opacity-90 text-xs sm:text-sm md:text-lg lg:text-xl">
-            W jaki sposób mikro-nawyki wpływają na samopoczucie?
-          </p>
-          <p className="max-w-xs leading-relaxed opacity-90 text-xs sm:text-sm md:text-lg lg:text-xl">
-            Czy 10 minut dziennie wystarczyło, żeby dać efekt?
-          </p>
-        </div>
-      </div>
-      <div className="flex flex-col items-center font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl gap-8 sm:gap-10 md:gap-12 w-full">
-        <h3 className=" text-center">Zbadaliśmy takie mikro-nawyki jak:</h3>
-
+      {" "}
+      {/* GÓRNA CZĘŚĆ */}{" "}
+      <div className="flex h-1/3 flex-col items-center">
+        {" "}
+        <h3 className="mb-6 text-lg font-bold sm:mb-8 sm:text-2xl md:text-3xl lg:text-4xl">
+          {" "}
+          Co chcieliśmy sprawdzić?{" "}
+        </h3>{" "}
+        <div className="mb-16 grid min-h-32 w-full max-w-[1000px] grid-cols-2 grid-rows-2 place-items-center items-center gap-4 text-center sm:mb-24 sm:gap-6">
+          {" "}
+          {/* Ikona 1 */}{" "}
+          <FaRegSmileBeam className="size-6 self-end sm:size-8 md:size-10" />{" "}
+          {/* Ikona 2 */}{" "}
+          <MdOutlineAccessTime className="size-6 self-end sm:size-8 md:size-10" />{" "}
+          {/* Tekst 1 */}{" "}
+          <p className="max-w-xs text-xs leading-relaxed opacity-90 sm:text-sm md:text-lg lg:text-xl">
+            {" "}
+            W jaki sposób mikro-nawyki wpływają na samopoczucie?{" "}
+          </p>{" "}
+          {/* Tekst 2 */}{" "}
+          <p className="max-w-xs text-xs leading-relaxed opacity-90 sm:text-sm md:text-lg lg:text-xl">
+            {" "}
+            Czy 10 minut dziennie wystarczyło, żeby dać efekt?{" "}
+          </p>{" "}
+        </div>{" "}
+      </div>{" "}
+      {/* KARUZELA */}{" "}
+      <div className="flex w-full flex-col items-center gap-8 text-lg font-bold sm:gap-10 sm:text-xl md:gap-12 md:text-2xl lg:text-3xl">
+        {" "}
+        <h3 className="text-center">
+          {" "}
+          Zbadaliśmy takie mikro-nawyki jak:{" "}
+        </h3>{" "}
         <Carousel swiperRef={swiperRef}>
+          {" "}
           {habitsCards.map((card) => (
             <SwiperSlide key={card.id} className="flex justify-center">
+              {" "}
               <div
-                className="bg-center bg-cover bg-no-repeat rounded-lg min-w-[100px] max-w-[280px] h-[300px] relative mx-auto shadow-xl"
+                className="relative mx-auto h-[300px] min-w-[100px] max-w-[280px] rounded-lg bg-cover bg-center bg-no-repeat shadow-xl"
                 style={{ backgroundImage: `url(${card.image})` }}
               >
-                <div className="absolute bottom-0 text-sm h-1/4 bg-white w-full rounded-b-lg text-center flex items-center justify-center px-2 text-black font-semibold">
-                  {card.text}
-                </div>
-              </div>
+                {" "}
+                <div className="absolute bottom-0 flex h-1/4 w-full items-center justify-center rounded-b-lg bg-white px-2 text-center text-sm font-semibold text-black">
+                  {" "}
+                  {card.text}{" "}
+                </div>{" "}
+              </div>{" "}
             </SwiperSlide>
-          ))}
-        </Carousel>
-      </div>
+          ))}{" "}
+        </Carousel>{" "}
+      </div>{" "}
+      {/* DEKORACJA NA DOLE */}{" "}
+      <img
+        src="/backgrounds/yellow-bg.png"
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute -bottom-10 left-0 z-20 h-12 w-full object-cover object-bottom"
+      />{" "}
     </section>
   );
 };
-
 export { HabitSection };
