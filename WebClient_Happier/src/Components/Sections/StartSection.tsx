@@ -20,7 +20,7 @@ const StartSection = () => {
   }, []);
 
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden" id="about-test">
       <div
         className="absolute inset-0 opacity-30 bg-cover bg-no-repeat pointer-events-none"
         style={{
@@ -77,7 +77,7 @@ const StartSection = () => {
                 href="#"
                 className="inline-block border-black border px-4 py-2 rounded-2xl font-thin text-center hover:scale-105 transition-transform"
               >
-                Dołącz do inicjatywy!
+                Pobierz raport
               </ButtonLink>
             </div>
           </div>

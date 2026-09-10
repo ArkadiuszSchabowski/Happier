@@ -1,10 +1,10 @@
 import ButtonLink from "../../shared/ButtonLink";
 
 const data = [
-  { label: "O badaniu", href: "#" },
+  { label: "O badaniu", href: "#about-test" },
   { label: "Wyniki", href: "#" },
-  { label: "Ambasadorzy", href: "#ambasadorzy" },
-  { label: "Dołącz do inicjatywy!", href: "#dolacz" },
+  { label: "Ambasadorzy", href: "#ambasadors" },
+  { label: "Dołącz do inicjatywy!", href: "#join-us" },
 ];
 
 export function TopNavigation() {
@@ -26,7 +26,7 @@ export function TopNavigation() {
             className="border-black border px-4 font-thin py-[2px]"
             color="green"
             variant="solid"
-            href="#wesprzyj"
+            href="#dotations"
           >
             Wesprzyj nas
           </ButtonLink>
