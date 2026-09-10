@@ -3,8 +3,6 @@ import { FaFacebookSquare } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 import { BsLinkedin } from "react-icons/bs";
 import { AiFillTikTok } from "react-icons/ai";
-import ButtonLink from "../../shared/ButtonLink";
-import { MdListAlt } from "react-icons/md";
 const socialIcons = [
   {
     href: "https://www.tiktok.com/@fundacjaszczesliwsi",
@@ -53,15 +51,6 @@ export default function Footer() {
         <p className="text-center text-xs sm:text-sm md:text-base lg:text-lg">
           Wesprzyj kolejną edycję badania!
         </p>
-        <ButtonLink
-          className="border border-black font-bold flex items-center px-6 py-3 sm:px-7 sm:py-3 text-sm sm:text-base md:text-lg lg:text-xl"
-          href="#"
-          color="yellow"
-          variant="solid"
-        >
-          <MdListAlt className="size-4 mr-2" />
-          Wypełnij formularz
-        </ButtonLink>
         <p className="text-center text-xs sm:text-sm md:text-base lg:text-lg">
           Każda forma pomocy jest na wagę złota!
         </p>
