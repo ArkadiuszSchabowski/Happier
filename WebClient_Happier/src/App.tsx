@@ -1,4 +1,3 @@
-import { AmbassadorsSection } from "./Components/Sections/AmbassadorsSection";
 import { EbookSection } from "./Components/Sections/EbookSection";
 import { HabitSection } from "./Components/Sections/Habit/HabitSection";
 import { DotationsSection } from "./Components/Sections/Dotations/DotationsSection";
@@ -17,7 +16,6 @@ const App = () => {
       <HabitSection />
       <EbookSection />
       <DotationsSection />
-      <AmbassadorsSection />
       <PatronitesSections />
       <Footer />
     </>
